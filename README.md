@@ -1,6 +1,6 @@
 # PySpark Practice - Day 1
 
-This project contains basic PySpark DataFrame operations implemented in Databricks.
+ basic PySpark DataFrame operations implemented in Databricks.
 
 It covers:
 - DataFrame creation
