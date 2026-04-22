@@ -8,3 +8,14 @@ It covers:
 - Column selection
 - Filtering data
 - Lazy evaluation concept
+
+  ## Day 2: withColumn + CASE WHEN
+  
+				Tasks:
+				• Add column: 
+				○ salary_flag → High (>80000) else Low 
+				Concept:
+			• Column expressions 
+			• when / otherwise 
+			Scenario:
+			Difference between SQL CASE and PySpark
