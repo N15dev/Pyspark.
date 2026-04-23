@@ -1,4 +1,4 @@
-# PySpark Practice - Day 1
+# PySpark Practice - Transformation 
 
  basic PySpark DataFrame operations implemented in Databricks.
 
@@ -9,13 +9,28 @@ It covers:
 - Filtering data
 - Lazy evaluation concept
 
-  ## Day 2: withColumn + CASE WHEN
-  
-				Tasks:
-				• Add column: 
-				○ salary_flag → High (>80000) else Low 
-				Concept:
-			• Column expressions 
-			• when / otherwise 
-			Scenario:
-			Difference between SQL CASE and PySpark
+ # PySpark: withColumn + CASE WHEN
+
+## Problem
+Add a new column `salary_flag` based on salary condition:
+- If salary > 80000 → "High"
+- Else → "Low"
+
+---
+
+## Approach
+- Use `withColumn()` to create a new column
+- Use `when()` and `otherwise()` for conditional logic
+- Similar to SQL `CASE WHEN`
+
+---
+
+## PySpark Solution
+
+```python
+from pyspark.sql.functions import when
+
+df = df.withColumn(
+    "salary_flag",
+    when(df.salary > 80000, "High").otherwise("Low")
+)
